@@ -3,3 +3,8 @@
 __pycache__/
 .idea/
 *.pyc
+ec_subseq
+gt_tracks
+outputs
+eds_subseq
+pretrained_weights

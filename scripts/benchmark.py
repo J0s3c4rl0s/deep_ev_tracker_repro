@@ -17,23 +17,23 @@ from utils.track_utils import compute_tracking_errors, read_txt_results
 plt.rcParams["font.family"] = "serif"
 
 EVAL_DATASETS = [
-    ("peanuts_light_160_386", EvalDatasetType.EDS),
-    ("rocket_earth_light_338_438", EvalDatasetType.EDS),
-    ("ziggy_in_the_arena_1350_1650", EvalDatasetType.EDS),
-    ("peanuts_running_2360_2460", EvalDatasetType.EDS),
-    ("shapes_translation_8_88", EvalDatasetType.EC),
-    ("shapes_rotation_165_245", EvalDatasetType.EC),
-    ("shapes_6dof_485_565", EvalDatasetType.EC),
+    # ("peanuts_light_160_386", EvalDatasetType.EDS),
+    # ("rocket_earth_light_338_438", EvalDatasetType.EDS),
+    # ("ziggy_in_the_arena_1350_1650", EvalDatasetType.EDS),
+    # ("peanuts_running_2360_2460", EvalDatasetType.EDS),
+    # ("shapes_translation_8_88", EvalDatasetType.EC),
+    # ("shapes_rotation_165_245", EvalDatasetType.EC),
+    # ("shapes_6dof_485_565", EvalDatasetType.EC),
     ("boxes_translation_330_410", EvalDatasetType.EC),
     ("boxes_rotation_198_278", EvalDatasetType.EC),
 ]
 
 error_threshold_range = np.arange(1, 32, 1)
 results_dir = Path(
-    "<path>/benchmark_data"
+    "C:/Users/lplet/Documents/TUDelft/MSC/Y1/DL/Project/deep_ev_tracker/"
 )
 out_dir = Path(
-    "<path>/benchmark_results"
+    "C:/Users/lplet/Documents/TUDelft/MSC/Y1/DL/Project/deep_ev_tracker/outputs/benchmark_results"
 )
 methods = ["network_pred"]
 
@@ -57,7 +57,7 @@ for k in table_keys:
 for eval_sequence in EVAL_DATASETS:
     sequence_name = eval_sequence[0]
     track_data_gt = read_txt_results(
-        str(results_dir / "gt" / f"{sequence_name}.gt.txt")
+        str(results_dir / "gt_tracks" / f"{sequence_name}.gt_tracks.txt")
     )
 
     rows = {}

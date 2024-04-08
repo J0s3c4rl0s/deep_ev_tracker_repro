@@ -1,12 +1,12 @@
 hydra:
   run:
-    dir: <path>/${model.name}/${now:%Y-%m-%d_%H%M%S}
+    dir:  C:/Users/lplet/Documents/TUDelft/MSC/Y1/DL/Project/group_branch/deep_ev_tracker_repro/outputs/${data.name}/${model.name}/${experiment}/${now:%Y-%m-%d_%H%M%S}
 
-gt_path: <path>/gt_tracks
+gt_path: C:/Users/lplet/Documents/TUDelft/MSC/Y1/DL/Project/group_branch/deep_ev_tracker_repro/gt_tracks
 running_locally: False
 
 
-weights_path: <path>
+weights_path: C:/Users/lplet/Documents/TUDelft/MSC/Y1/DL/Project/group_branch/deep_ev_tracker_repro/pretrained_weights/weights_finetuned_ec.ckpt
 
 track_name: shitomasi_custom
 representation: time_surfaces_v2_5
@@ -19,4 +19,4 @@ defaults:
   - model: correlation3_unscaled
 # Pytorch lightning trainer's argument
 trainer:
-  gpus: [0]
+  gpus: 0

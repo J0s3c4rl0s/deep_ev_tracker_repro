@@ -110,3 +110,14 @@ N.B. We provide our results so this step is not necessary.
 1. Move the results into `gt/network_pred/` (We provide our own results in the drive)
 2. Run `python -m scripts.benchmark`
 3. Results will be written to `out/benchmarking_results.csv`
+
+## Issues Encountered 
+1. During data preprocessing, some time query gives an error for being out of the pose data range. (can be fixed by removing the first entry: '0.000000' from the respective images.txt file)
+2. When running train.py, the same query issue mentioned above is encountered. (ultimate issue while running train.py)
+3. COLMAP instructions in the GITHUB readme of the original code were sometimes wrong , we had to refer the COLMAP documentation(we suggest the reader do the same)
+4. Pre-processing steps like feature-extract were very slow and took upto an hour to run.
+5. We also experienced dependency issues during the setup process. Not all dependencies listed in the requirements.txt file are functional; specifically, torch needs to be manually downloaded as per the official documentation. Additionally, certain parts of the code rely on deprecated functionality, necessitating the downgrading of dependency versions.
+6. The preprocessed data for training EC is not provided. We had to download it [here](https://rpg.ifi.uzh.ch/davis_data.html) .
+7. The instructions to import and export the model on COLMAP are unclear, especially the which image folder is to be imported (we imported images_corrected).
+8. The intermediate files generated during the preprocessing stage are considerably large, with sizes upwards of 2 to 3 gigabytes per sequence.
+9. The train.py script contained a bug that required rewriting. Our attempted fix involves ensuring that a method is called on the class itself rather than on an instance of the class, although there's a possibility that our correction might be incorrect.

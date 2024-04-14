@@ -33,7 +33,7 @@ results_table.field_names = ["Inference Time"]
 corner_config = CornerConfig(30, 0.3, 15, 0.15, False, 11)
 
 EvalDatasetConfigDict = {
-    EvalDatasetType.EC: {"dt": 0.010, "root_dir": "C:/Users/willy/Documents/Random Bullshit/deep_ev_tracker_repro/ec_subseq/"},
+    EvalDatasetType.EC: {"dt": 0.010, "root_dir": "<path>"},
     #EvalDatasetType.EDS: {"dt": 0.005, "root_dir": "<path>"},
 }
 

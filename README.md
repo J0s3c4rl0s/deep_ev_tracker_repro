@@ -80,6 +80,13 @@ The network is first trained on synthetic data from the Multiflow dataset, which
 
 A novel pose supervision loss is introduced based solely on ground truth poses of a calibrated camera to adapt the network to real events. Ground truth poses can be obtained for sparse timesteps using structure-from-motion algorithms or external motion capture systems. The supervision strategy relies on the triangulation of 3D points based on poses, applicable only in static scenes. For each predicted track, the corresponding 3D point is computed using the direct linear transform. The final pose supervision loss is constructed based on the predicted feature and the reprojected feature for each available camera pose at timestep \(t_j\), using a truncated loss to exclude loss contributions if the reprojected feature is outside of the event patch.
 
+
+# Our reproduction goals
+
+We managed to reproduce some of the results of the paper. Namely recreating the benchmark results for the fine-tuned EC dataset. For this we used the authors model checkpoint that had been fine tuned on the EC dataset as well as their already preprocessed evaluation dataset which they provided as well. This was not without its complications which will be explained in the following section. The results obtained are also explained in a later section
+
+We also attempted to recreate the fine tuning itself, taking their model checkpoint on the synthetic dataset and fine tuning it on a (smaller) sample of the EC dataset and then evaluate it. This we did not manage to reproduce as we ran into a number of issues with the pre-processing pipeline and training script. 
+
 # Reproducing our results
 
 ## Setting up dependencies 

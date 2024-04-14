@@ -5,7 +5,7 @@
 | Jose   |     |     |
 | Mitali   | m.s.patil@student.tudelft.nl    | 5934060    |
 | Dean   |    |     |
-| Nils   |    |    |
+| Nils   |  N.vanVeen-3@student.tudelft.nl  | 4917863    |
 
 # Introduction
 

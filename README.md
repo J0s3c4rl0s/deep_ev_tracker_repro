@@ -121,3 +121,12 @@ N.B. We provide our results so this step is not necessary.
 7. The instructions to import and export the model on COLMAP are unclear, especially the which image folder is to be imported (we imported images_corrected).
 8. The intermediate files generated during the preprocessing stage are considerably large, with sizes upwards of 2 to 3 gigabytes per sequence.
 9. The train.py script contained a bug that required rewriting. Our attempted fix involves ensuring that a method is called on the class itself rather than on an instance of the class, although there's a possibility that our correction might be incorrect.
+
+
+## Team Contribution 
+| Member | Work |
+|----------|----------|
+| Jose   |    | 
+| Mitali    | Data pre-processing for POSE EC Dataset | 
+| Dean   |    | 
+| Nils    |     |

@@ -1,5 +1,12 @@
 # Group 58 Reproducibility project: Data-driven feature tracking for event cameras
 
+| Name | Contact | Student ID|
+|----------|----------|----------|
+| Jose   |     |     |
+| Mitali   | m.s.patil@student.tudelft.nl    | 5934060    |
+| Dean   |    |     |
+| Nils   |    |    |
+
 # Introduction
 
 The paper "Data-Driven Feature Tracking for Event Cameras" by Nico Messikommer et al. addresses the advantages of event cameras, such as their high temporal resolution and resilience to motion blur, which make them ideal for low-latency and low-bandwidth feature tracking, especially in challenging scenarios. However, existing feature tracking methods for event cameras often require extensive parameter tuning, are sensitive to noise, and lack generalization to different scenarios. To overcome these shortcomings, the authors introduce the first data-driven feature tracker for event cameras. Leveraging low-latency events to track features detected in a grayscale frame, their approach achieves performance through a novel frame attention module, enabling information sharing across feature tracks. By transferring knowledge from synthetic to real data and employing a self-supervision strategy, their tracker outperforms existing methods in relative feature age, maintaining the lowest latency, highlighting significant advancements in event camera feature tracking. While our experiments are not supporting the findings of the authors and this reproduction is mainly focused on setting up the authors code, we outline how their method works, what we tried to reproduce as well as a division of tasks among the group.

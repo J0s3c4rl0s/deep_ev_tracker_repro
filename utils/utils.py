@@ -97,14 +97,20 @@ def propagate_keys(cfg, testing=False):
 
         cfg.model.representation = cfg.representation
         cfg.data.patch_size = cfg.patch_size
-
+        
+        
+        
         if not testing:
             cfg.model.n_vis = cfg.n_vis
+            # It says these need to be the same but idk how to know that, so I'll just assert 
             cfg.model.init_unrolls = cfg.init_unrolls
             cfg.model.max_unrolls = cfg.max_unrolls
+            assert cfg.model.init_unrolls == cfg.model.max_unrolls
             cfg.model.debug = cfg.debug
 
-        cfg.model.pose_mode = cfg.data.name == "pose"
+        # I think this is necessary?
+        cfg.model.pose_mode = True
+        #cfg.model.pose_mode = cfg.data.name == "pose"
 
 
 def skew(x):

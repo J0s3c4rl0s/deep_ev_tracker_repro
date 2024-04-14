@@ -1,12 +1,12 @@
 hydra:
   run:
-    dir: <path>/${model.name}/${now:%Y-%m-%d_%H%M%S}
+    dir: <path_to_repo>/${model.name}/${now:%Y-%m-%d_%H%M%S}
 
-gt_path: <path>/gt_tracks
+gt_path: <path_to_repo>/gt_tracks
 running_locally: False
 
 
-weights_path: <path>
+weights_path: <path_to_repo>/pretrained_weights/weights_finetuned_ec.ckpt
 
 track_name: shitomasi_custom
 representation: time_surfaces_v2_5

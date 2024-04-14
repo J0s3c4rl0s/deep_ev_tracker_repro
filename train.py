@@ -28,8 +28,14 @@ def train(cfg):
         _recursive_=False,
     )
     if cfg.checkpoint_path.lower() != "none":
+        # This code gives error 
+        # The classmethod TrackerNetC.load_from_checkpoint cannot be called on an instance.
+        # Please call it on the class type and make sure the return value is used.
+        '''
         # Load weights
         model = model.load_from_checkpoint(checkpoint_path=cfg.checkpoint_path)
+        '''
+        model = model._class_.load_from_checkpoint(checkpoint_path=cfg.checkpoint_path)
 
         # Override stuff for fine-tuning
         model.hparams.optimizer.lr = cfg.model.optimizer.lr
